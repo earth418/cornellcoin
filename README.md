@@ -1,5 +1,5 @@
 # cornellcoin
-corncoin
+corncoin - Made by some Cornell people
 
 
 - Software for interfacing miners with some centralized database that links them to the other miners, as well as any pending blocks
