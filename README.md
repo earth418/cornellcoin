@@ -1,0 +1,2 @@
+# cornellcoin
+corncoin
