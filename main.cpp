@@ -1,8 +1,6 @@
 #include <iostream>
 #include "block.h"
 
-#pragma once
-
 int main()
 {
 

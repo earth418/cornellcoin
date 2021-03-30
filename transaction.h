@@ -12,4 +12,4 @@ public:
     Transaction(const char* fromAddress = "", const char* toAddress = "", const double& transferAmount = 0.0)
         : addressFrom(fromAddress), addressTo(toAddress), amountTransferred(transferAmount)
     {}
-}
+};

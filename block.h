@@ -20,8 +20,8 @@ public:
     * A finished block has a complete list of NUM_TRANSACTIONS transactions
     **/
    
-    Block(const char* previousBlockHash, const Transaction* listOfTransactionsToAdd, const char* proofOfWork)
+    Block(const char* previousBlockHash, Transaction* listOfTransactionsToAdd, char* proofOfWork)
     : precedingBlockHash(previousBlockHash), transactionList(listOfTransactionsToAdd), blockKey(proofOfWork)
     {}
 
-}
+};
