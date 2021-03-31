@@ -29,7 +29,7 @@ class Blockchain
 
         for (int i = 0; i < 40; ++i)
         {
-            if (*(inputKey + i) == 1)
+            if (*(inputKey + i) == '1')
                 return false;
         }
 
