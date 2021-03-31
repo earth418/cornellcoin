@@ -35,7 +35,7 @@ class Blockchain
 
         return true;
     }
-}
+};
 
 int main()
 {
