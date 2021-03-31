@@ -5,7 +5,7 @@
 class Block
 {
 
-    const int NUM_TRANSACTIONS = 256;
+    const static int NUM_TRANSACTIONS = 256;
 
     const char* precedingBlockHash;
 
