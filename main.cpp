@@ -1,18 +1,17 @@
 #include <iostream>
+#include <vector>
 #include "block.h"
 
 class Blockchain
 {
-    Transaction* currentTransactions;
-    int numTransactions;
+    std::vector<Transaction> currentTransactions;
     Block currentBlock;
 
     void addTransaction(const Transaction& newTransaction)
     {
-        *(currentTransactions + numTransactions) = newTransaction;
-        ++numTransactions;
+        currentTransactions.push_back(newTransaction);
 
-        if (numTransactions == Block::NUM_TRANSACTIONS)
+        if (currentTransactions.size() == Block::NUM_TRANSACTIONS)
         {
             // TODO
         }
