@@ -5,8 +5,6 @@
 class Block
 {
 
-    const static int NUM_TRANSACTIONS = 256;
-
     const char* precedingBlockHash;
 
     Transaction* transactionList = (Transaction*) malloc(sizeof(Transaction) * NUM_TRANSACTIONS); // just in case we actually wanna do C for some reason
@@ -14,6 +12,8 @@ class Block
     char* blockKey; // When the proof-of-work is found, store it in the blockKey.
 
 public:
+
+    const static int NUM_TRANSACTIONS = 256;
 
     /** 
     * Called when the proof-of-work has been found for a finished block
