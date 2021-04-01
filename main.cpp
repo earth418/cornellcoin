@@ -20,7 +20,7 @@ class Blockchain
 
     /*
     * Pass in a value that has been hashed, to check if it is a valid proof-of-work solution.
-    * Precondition: inputKey is a 256-length string of ones and zeros. Can be passed as a bool pointer, or even one char. 0 < inputKey < 0xff
+    * Precondition: inputKey is a 256-length string of ones and zeros.
     */
     bool isValidKey(const std::bitset<256> inputKey)
     {
@@ -29,7 +29,7 @@ class Blockchain
 
         for (int i = 0; i < 40; ++i)
         {
-            if (inputKey[i] == 1)
+            if (inputKey[i])
                 return false;
         }
 
