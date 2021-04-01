@@ -27,12 +27,18 @@ class Block:
         return h.hexdigest()
 
     def __str__(self):
-        return "Block Hash: " + str(self.hash()) + "\nBlockNo: " + str(self.blockNo) + "\nBlock Data: " + str(self.data) + "\nHashes: " + str(self.nonce) + "\n--------------"
+        return f'''
+--------------
+Block Hash: {self.hash()} 
+BlockNo: {self.blockNo} 
+Block Data: {self.data} 
+Hashes: {self.nonce} 
+--------------'''
 
 class Blockchain:
 
-    diff = 20
-    maxNonce = 2**32
+    diff = 50 # difficulty will decrease the target range the higher it goes, therefore harder problem
+    maxNonce = 2**32 # 	Must be less than target number. Just accept it 
     target = 2 ** (256-diff)
 
     block = Block("Genesis")
