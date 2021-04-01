@@ -1,3 +1,5 @@
+# Trying to use a medium article and the https://bitcoin.org/bitcoin.pdf to piece this together...
+
 import time
 import hashlib
 
