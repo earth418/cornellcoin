@@ -1,12 +1,18 @@
 #include <iostream>
 #include <vector>
 #include <bitset>
+#include <array>
+#include <utility>
 #include "block.h"
 
 class Blockchain
 {
+
+    std::vector<Block> blockChain;
+
     std::vector<Transaction> currentTransactions;
-    Block currentBlock;
+
+    std::bitset<256> hashOfPreviousBlock;
 
     void addTransaction(const Transaction& newTransaction)
     {
@@ -14,8 +20,23 @@ class Blockchain
 
         if (currentTransactions.size() == Block::NUM_TRANSACTIONS)
         {
+            std::array<Transaction, Block::NUM_TRANSACTIONS> transactionArray;
+            std::move(currentTransactions.begin(), currentTransactions.end(), transactionArray.begin());
+
             // TODO
+            const auto currentBlock = Block(hashOfPreviousBlock, transactionArray);
+
+            hashOfPreviousBlock = hash(currentBlock); // hash the block, or something
         }
+    }
+
+    void addBlock(const Block& inputBlock)
+    {
+
+        if (proofOfWorkFound)
+
+            blockChain.push_back(inputBlock);
+
     }
 
     /*
